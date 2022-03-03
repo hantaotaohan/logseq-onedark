@@ -237,19 +237,21 @@ mark {
 :not(pre)>code {
     border-radius: 3px;
     font-size: 1em;
-   font-family: FiraCode,"微软雅黑";
+    font-family: FiraCode,"微软雅黑";
     padding: 0px 5px 0px 5px !important;
-    margin: 0px 3px 0px 3px;
+    margin: 0px 8px 0px 8px;
+    border-color: #abb2bf;
+    border: solid 1px #abb2bf22;
     font-style: normal !important;
     letter-spacing: 0;
-    word-spacing: -.15em;
+    word-spacing: .30em;
     -webkit-border-radius: var(--ls-border-radius-low);
     border-radius: var(--ls-border-radius-low);
-    color: var(--ls-page-inline-code-color);
-    background-color: #3f44506b;
+    color: #abb2bf99;
+    background-color: #282c34;
     line-height: 1.45;
     text-rendering: optimizeSpeed;
-    box-shadow: 1px 2px 2px #00000060 !important;
+    box-shadow: 1px 1px 5px 5px #00000050 !important;
 }
 
 /* 引用块样式调整 */
