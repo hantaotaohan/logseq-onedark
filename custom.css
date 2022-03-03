@@ -102,15 +102,16 @@ textarea {
     border-radius: 6px;
 }
 
-/* 代码区域设置 主面板 */
-.extensions__code>.CodeMirror {
-    background-color: #282c34;
+/* 主代码块样式 */
+.cm-s-solarized.cm-s-dark {
+    background: #282c34;
     font-family: "FiraCode";
     padding-top: 0px;
     line-height: 1.75em;
     margin: 1rem;
     box-shadow: 1px 1px 10px 10px #00000030 !important;
 }
+
 
 /*  代码主面板距离编号栏的横向间距 */
 .CodeMirror pre.CodeMirror-line, .CodeMirror pre.CodeMirror-line-like {
@@ -404,7 +405,19 @@ blockquote {
   display: none;
 }
 
+/* 鼠标选中状态的样式 */
 ::selection {
     background: #282c34;
     color: #61afef;
+}
+
+/* 移动端  iPhone XR */
+/* 1792x828px at 326ppi */
+/* 禁止 ios 左右拖动 */
+.cp__sidebar-main-content {
+	width: 100%;
+}
+
+.cp__sidebar-main-content:not([data-is-global-graph-pages=true]) > div {
+	padding: 64px 32px; 
 }
