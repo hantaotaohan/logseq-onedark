@@ -1,3 +1,4 @@
+/* @import url("https://cdn.jsdelivr.net/gh/hantaotaohan/logseq-onedark@latest/custom.css"); */
 /* 全局变量 */
 :root {
   --ct-text-size: 1rem;
@@ -17,9 +18,9 @@ body {
 
 /* 段落间距 */
 .pr-2 {
-  padding-right: calc(var(--ct-line-height)*0.25); /* .5rem */
-  margin-top: calc(var(--ct-line-height)*0.25); /* .5rem */
-  margin-bottom: calc(var(--ct-line-height)*0.25); /* .5rem */ 
+  padding-right: calc(var(--ct-line-height)*0.15); /* .5rem */
+  margin-top: calc(var(--ct-line-height)*0.15); /* .5rem */
+  margin-bottom: calc(var(--ct-line-height)*0.15); /* .5rem */ 
 }
 
 /* 编辑状态下的样式设置 */
@@ -27,7 +28,6 @@ textarea {
   box-sizing: content-box;
   line-height: var(--ct-line-height);
   text-align: justify;
-
 }
 
 /* 编辑状态下的block高亮样式设置 */
