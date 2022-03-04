@@ -15,6 +15,13 @@ body {
   line-height: var(--ct-line-height);
 }
 
+/* 段落间距 */
+.pr-2 {
+    padding-right: .5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
 /* 编辑状态下的样式设置 */
 textarea {
   box-sizing: content-box;
