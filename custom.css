@@ -1,7 +1,7 @@
 /* 全局变量 */
 :root {
-  --ct-text-size: 16px;
-  --ct-line-height: 2.0;
+  --ct-text-size: 1rem;
+  --ct-line-height: 2rem;
   --ls-font-family:  Inter, sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei UI", sans-serif;
   --ct-page-title-font-family: var(--ls-font-family);
   --ct-code-font-family: "FireCode", monospace;
@@ -17,9 +17,9 @@ body {
 
 /* 段落间距 */
 .pr-2 {
-    padding-right: .5rem;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+  padding-right: calc(var(--ct-line-height)*0.25); /* .5rem */
+  margin-top: calc(var(--ct-line-height)*0.25); /* .5rem */
+  margin-bottom: calc(var(--ct-line-height)*0.25); /* .5rem */ 
 }
 
 /* 编辑状态下的样式设置 */
@@ -28,19 +28,19 @@ textarea {
   line-height: var(--ct-line-height);
 }
 
+/* 编辑状态下的block高亮样式设置 */
 .editor-inner textarea {
-    border: none;
-    border-radius: 0;
-    background: 0 0;
-    padding: 0;
     color: #fff;
     resize: none;
 }
 
-.sm\:mr-2 {
-    margin-right: .5rem;
-    min-height: 2rem !important;
-   box-sizing: content-box;
+/* block符号和block内的文字center */
+.ls-block div.items-center {
+    position: relative;
+    align-self: baseline !important;
+  /*  height: var(--ct-line-height); !important; */
+    min-height: 100%;
+    margin: 0rem 0.5rem 0rem 0rem !important;
 }
 
 /* 主题颜色配置 */
@@ -114,11 +114,10 @@ textarea {
     background: #282c34;
     font-family: "FiraCode";
     padding-top: 0px;
-    line-height: 1.75em;
+    line-height: 1.75rem;
     margin: 1rem;
     box-shadow: 1px 1px 10px 10px #00000030 !important;
 }
-
 
 /*  代码主面板距离编号栏的横向间距 */
 .CodeMirror pre.CodeMirror-line, .CodeMirror pre.CodeMirror-line-like {
@@ -156,7 +155,7 @@ textarea {
 }
 
 .cm-s-solarized .cm-atom {
-    color: #98c379;
+    color: #98c379 !important;
 }
 
 .cm-s-solarized .cm-variable {
@@ -164,7 +163,7 @@ textarea {
 }
 
 .cm-s-solarized .cm-variable-2 {
-    color: #e5c07b;
+    color: #e5c07b !important;
 }
 
 .cm-s-solarized .cm-string {
@@ -177,6 +176,10 @@ textarea {
 
 .cm-s-solarized .cm-property {
     color: #d19a66 !important;
+}
+
+.cm-s-solarized .cm-attribute {
+    color: #61afef;
 }
 
 .cm-s-solarized .cm-operator {
@@ -201,11 +204,11 @@ textarea {
 } 
 
 .cm-s-solarized .cm-type, .cm-s-solarized .cm-variable-3 {
-    color: #61afef;
+    color: #61afef !important;
 }
 
 .cm-s-solarized .cm-qualifier {
-    color: #e5c07b;
+    color: #e5c07b !important;
 }
 
 /* 搜索结果显示设定 */
@@ -218,10 +221,20 @@ mark {
     text-decoration: none;
 }
 
+/*  搜索页面当前链接块的背景色 */
+.cp__palette-main .chosen, .cp__select-main .chosen {
+    background-color: #abb2bf11;
+}
+
+/* 鼠标滑过关键词之外的字体颜色 */
+a.hover {
+  color: #FFFFFF !important;
+}
+
 /* Markdown H1 H2 间距 */
 .editor-inner .uniline-block:is(.h1,.h2),.ls-block :is(h1,h2) {
 	border-bottom: none;
-    margin: 0em 0 0;
+    margin: 0rem 0rem 0rem 0rem;
 }
 
 /* 列表的左边线条样式及颜色 */
@@ -258,7 +271,8 @@ mark {
     background-color: #282c34;
     line-height: 1.45;
     text-rendering: optimizeSpeed;
-    box-shadow: 1px 1px 5px 5px #00000050 !important;
+    box-shadow: 0px 1px 5px 1px #00000060 !important;
+    /* box-shadow: 1px 1px 5px 5px #00000050 !important; */
 }
 
 /* 引用块样式调整 */
@@ -270,9 +284,9 @@ blockquote {
     border-left: 4px solid;
     border-left-color: var(--ls-page-blockquote-border-color,#d3d3d3);
     background-color: var(--ls-page-blockquote-bg-color,#f7f7f7);
-    margin: 1rem 0;
+    margin: 0rem 0;
     color: var(--ls-page-blockquote-color,#24292e);
-    font-size: 1rem;
+    font-size: 0.9rem;
     box-shadow: 1px 2px 2px #00000060 !important;
 }
 
@@ -329,7 +343,7 @@ blockquote {
 
 /* Block bullet path should only show in a nested block */
 .ls-block {
-/* Block bullet path should only show in a nested block */
+  text-align: justify;
 }
 
 .ls-block .bullet {
@@ -338,7 +352,7 @@ blockquote {
 }
 .ls-block div.items-center {
   position: relative;
-  height: 26px !important;
+  height: 2rem !important;
 }
 .ls-block > .items-baseline {
   /* align-items: initial; */
@@ -357,7 +371,7 @@ blockquote {
   content: "";
   left: calc(var(--ls-block-bullet-threading-width) * -1);
   right: 6px;
-  top: calc(-50% + var(--ls-block-bullet-threading-width) * 0.5 - 1px);
+  top: calc(-50% + var(--ls-block-bullet-threading-width) * 0.5 - 1rem);
   bottom: 50%;
   /* shift left 1px for border */
   position: absolute;
@@ -402,8 +416,18 @@ blockquote {
 	left: -7.5px;
     margin-left: -7.5px; 
   }
-.block-children-container {
+  .block-children-container {
     left: 7px;
+}
+  
+  /* 移动端  iPhone XR */
+/* 1792x828px at 326ppi */
+/* 禁止 ios 左右拖动 */
+  .cp__sidebar-main-content {
+	max-width: 95%;
+}
+
+.cp__sidebar-main-content:not([data-is-global-graph-pages=true]) > div {
 }
 }
 /* Disable for doc mode */
@@ -418,15 +442,4 @@ blockquote {
 ::selection {
     background: #282c34;
     color: #61afef;
-}
-
-/* 移动端  iPhone XR */
-/* 1792x828px at 326ppi */
-/* 禁止 ios 左右拖动 */
-.cp__sidebar-main-content {
-	width: 100%;
-}
-
-.cp__sidebar-main-content:not([data-is-global-graph-pages=true]) > div {
-	padding: 64px 32px; 
 }
