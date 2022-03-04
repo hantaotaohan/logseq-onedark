@@ -26,6 +26,8 @@ body {
 textarea {
   box-sizing: content-box;
   line-height: var(--ct-line-height);
+  text-align: justify;
+
 }
 
 /* 编辑状态下的block高亮样式设置 */
