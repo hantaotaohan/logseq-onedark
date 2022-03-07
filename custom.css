@@ -446,3 +446,14 @@ blockquote {
     background: #282c34;
     color: #61afef;
 }
+
+/* Bold */
+b,
+strong {
+  color: #e06c75;
+  font-weight: 600;
+}
+
+.with-bg-color :is(b, strong) {
+  color: inherit;
+}
