@@ -124,6 +124,8 @@ textarea {
 /*  代码主面板距离编号栏的横向间距 */
 .CodeMirror pre.CodeMirror-line, .CodeMirror pre.CodeMirror-line-like {
     padding-left: 1rem;
+    white-space: break-spaces;
+    word-wrap: break-all;
 }
 
 /* 代码区域设置 主面板的左边编号栏背景样式设定 */
