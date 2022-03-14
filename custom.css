@@ -456,7 +456,25 @@ blockquote {
     color: #61afef;
 }
 
-/* Bold */
+/* 主代码框数字边栏设置 */
+.cm-s-solarized.cm-s-dark .CodeMirror-gutters {
+    background-color: #000;
+    border-right-color: #000;
+    border-right-style: solid;
+}
+
+/* 页面内代码宽度固定 */
+pre {
+    background: var(--ls-secondary-background-color,#f6f8fa);
+    margin: 1rem 0;
+    line-height: 1.45em;
+    word-break: break-all;
+    white-space: normal;
+    word-wrap: break-word !important;
+}
+
+/* Bold 
+
 b,
 strong {
   color: #e06c75;
@@ -466,3 +484,5 @@ strong {
 .with-bg-color :is(b, strong) {
   color: inherit;
 }
+
+*/
