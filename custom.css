@@ -473,43 +473,29 @@ pre {
     word-wrap: break-word !important;
 }
 
-/* Bold 
-
-b,
-strong {
-  color: #e06c75;
-  font-weight: 600;
-}
-
-.with-bg-color :is(b, strong) {
-  color: inherit;
-}
-
-*/
-
-/* --------------------------------------------------------------------------------- */
-
-
-
-/* 主代码框数字边栏设置 
-.cm-s-solarized.cm-s-dark .CodeMirror-gutters {
-    background-color: #000;
-    border-right-color: #000;
-    border-right-style: solid;
-}
-
-/* 页面内代码宽度固定 
-.extensions__code {
-  margin-top: 8px;
-}
-.extensions__code-lang + div {
-  margin-top: 0 !important;
-}
-
-/* 分割线设置 
+/* 分割线设置  */
 hr {
     margin: 1rem 0;
     border-color: var(--ls-border-color,#ccc);
 }
 
-*/
+/* 高亮设置 */
+mark.yellow {
+  background-color: #E5C07B80;
+  color: #FFFFFF;
+}
+
+mark.blue {
+  background-color: #61AFEF80;
+  color: #FFFFFF;
+}
+
+mark.green {
+  background-color: #98C37980;
+  color: #FFFFFF;
+}
+
+mark.red {
+  background-color: #E06C7580;
+  color: #FFFFFF;
+}
